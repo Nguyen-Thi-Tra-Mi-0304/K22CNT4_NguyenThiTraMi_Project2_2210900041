@@ -1,0 +1,26 @@
+﻿@model IEnumerable<K22CNT4_TTCD1_NguyenThiTraMi.Models.EF.NttmCategory>
+
+@if (Model != null && Model.Any())
+{
+    <ul class="navbar_menu">
+        @foreach (var item in Model)
+        {
+            if (item.NttmAlias.Equals("trang-chu"))
+            {
+                item.NttmAlias = "";
+            }
+            if(!string.IsNullOrEmpty(item.Link))
+            {
+                item.NttmAlias = item.Link;
+
+            }
+            <li><a href="/@item.NttmAlias">@item.NttmTitle</a></li>
+
+        }
+        @*<li><a href="#">shop</a></li>
+        <li><a href="#">promotion</a></li>
+        <li><a href="#">pages</a></li>
+        <li><a href="#">blog</a></li>
+        <li><a href="contact.html">contact</a></li>*@
+    </ul>
+}

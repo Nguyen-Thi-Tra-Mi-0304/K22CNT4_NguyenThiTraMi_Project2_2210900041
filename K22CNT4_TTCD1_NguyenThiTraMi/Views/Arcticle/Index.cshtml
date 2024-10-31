@@ -1,0 +1,94 @@
+﻿@model K22CNT4_TTCD1_NguyenThiTraMi.Models.EF.NttmPosts
+@{
+    ViewBag.Title = "Chi tiết bài viết";
+}
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/main_styles.css">
+<!-- Slider -->
+<style>
+    .news_section_container {
+        margin-top: 180px;
+    }
+
+    .row-item-new {
+        margin-bottom: 20px;
+    }
+
+    .title-news {
+        font-size: 24px;
+        border-bottom: 1px solid;
+        padding: 15px 0;
+        margin-bottom: 25px;
+    }
+
+    .img-box img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+</style>
+<div class="container news_section_container">
+    @if (Model != null)
+    {
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="title-news text-center"> @Model.NttmTitle</h1>
+            </div>
+        </div>
+        <div class="row">
+            @*<div class="col-md-12">
+                @Model.NttmDescription
+            </div>*@
+            <div class="col-md-12">
+                @Html.Raw(Model.NttmDetail)
+            </div>
+        </div>
+    }
+
+</div>
+
+
+@*@model K22CNT4_TTCD1_NguyenThiTraMi.Models.EF.NttmPosts
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    <link rel="stylesheet" type="text/css" href="~/Content/assets/styles/main_styles.css">
+
+    <style>
+        .news_section_container {
+            margin-top: 180px;
+        }
+    </style>
+
+    <div class="container news_section_container">
+        <div class="row">
+            <h2 class=" text-center text-danger">@Model.NttmTitle </h2>
+            <p>
+                Chào mừng ngày Phụ nữ Việt Nam 20/10 – Một ngày để tôn vinh và trao gửi tình yêu đến những người phụ nữ bạn yêu quý. Hãy cùng MoNaSaiGon lựa chọn những món quà yêu thương để tặng cho người phụ nữ thân yêu của bạn!
+            </p>
+
+            <span style="color: red">Các ưu đãi đặc biệt cho dịp 20/10:</span>
+
+            <p>
+                Combo Hoa và Lời chúc tặng kèm: Mua bất kỳ bó hoa nào tại cửa hàng, bạn sẽ nhận được một thiệp chúc mừng và gói quà tặng độc đáo miễn phí. [Thêm hình ảnh thiệp và quà tặng kèm]
+                Giảm giá 15% cho Đơn Hàng Trực Tuyến: Đặt hàng trực tuyến trước ngày 20/10 và bạn sẽ được giảm giá 15% trên tổng hóa đơn. Sử dụng mã giảm giá: NGAY20/10 khi thanh toán.
+                Thời gian ưu đãi: Từ ngày XX/XX đến ngày XX/XX
+            </p>
+
+            <p>Liên hệ với chúng tôi: </p>
+            <p>Địa chỉ: [Địa chỉ cửa hàng của bạn]</p>
+            <p>Số điện thoại: [Số điện thoại của bạn]</p>
+            <p>Website: [Đường dẫn đến trang web của bạn]</p>
+            <p>Facebook: [Liên kết đến trang Facebook của bạn]</p>
+            <p>
+                Chúng tôi hy vọng rằng bạn sẽ cùng chúng tôi tạo ra những khoảnh khắc đáng nhớ!
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+*@
