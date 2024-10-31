@@ -1,0 +1,27 @@
+﻿@model K22CNT4_TTCD1_NguyenThiTraMi.Models.ThongKeModel
+@if (Model != null)
+{
+    <div class="thongke">
+        <div class="sidebar_title">
+            <h5 style="margin-top: 50px">View Count</h5>
+        </div>
+        <table class="table">
+            <tr>
+                <td>Hôm nay</td>
+                <td>@Model.HomNay</td>
+            </tr>
+            <tr>
+                <td>Hôm qua</td>
+                <td>@Model.HomQua</td>
+            </tr>
+            <tr>
+                <td>Tuần này</td>
+                <td>@Model.TuanNay</td>
+            </tr>
+            <tr>
+                <td>Số người Online</td>
+                <td>@ViewBag.Visitors_online</td>
+            </tr>
+        </table>
+    </div>
+}
