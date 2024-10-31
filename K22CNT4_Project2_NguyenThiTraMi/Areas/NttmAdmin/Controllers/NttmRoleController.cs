@@ -6,14 +6,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Net;
+using System.Data.Entity;
 
 namespace K22CNT4_TTCD1_NguyenThiTraMi.Areas.NttmAdmin.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class RoleController : Controller
+    public class NttmRoleController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        // GET: Admin/Role
+        // GET: Admin/NttmRole
         public ActionResult Index()
         {
             var items = db.Roles.ToList();
@@ -40,11 +42,21 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi.Areas.NttmAdmin.Controllers
         }
 
         // Sửa 
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
-            var item = db.Roles.Find(id);
-            return View(item);
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest); // Trả về lỗi nếu id là null
+            }
+
+            var role = db.Roles.Find(id);
+            if (role == null)
+            {
+                return HttpNotFound(); // Xử lý trường hợp không tìm thấy vai trò
+            }
+            return View(role);
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -52,10 +64,24 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi.Areas.NttmAdmin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
-                roleManager.Update(model);
+                // Tìm vai trò dựa trên Id của model
+                var role = db.Roles.Find(model.Id);
+                if (role == null)
+                {
+                    return HttpNotFound(); 
+                }
+
+                // Chỉ cập nhật tên của vai trò
+                role.Name = model.Name;
+
+                
+                db.Entry(role).State = EntityState.Modified;
+                db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
+
+            // Nếu có lỗi, trả về lại View với model
             return View(model);
         }
     }

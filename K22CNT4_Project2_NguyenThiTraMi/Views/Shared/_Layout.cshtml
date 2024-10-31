@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="~/Content/assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="~/Content/assets/plugins/OwlCarousel2-2.2.1/animate.css">
     <link rel="stylesheet" type="text/css" href="~/Content/assets/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
-
+    <link href="~/Content/assets/styles/search_styles.css" rel="stylesheet" />
     @*@RenderSection("css", required: false)*@
     <link rel="stylesheet" type="text/css" href="~/Content/assets/styles/responsive.css">
     @Styles.Render("~/Content/css")
@@ -117,9 +117,14 @@
                             <nav class="navbar">
                                 @Html.Action("NttmMenuTop", "NttmMenu")
                                 <ul class="navbar_user">
-                                    <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                    <li class="search-container">
+                                        <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                                        <button id="searchBtn">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                        </button>
+                                    </li>
                                     @*<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>*@
-                                    <li><a href="/"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+                                    @*<li><a href="/"><i class="fa fa-heart" aria-hidden="true"></i></a></li>*@
                                     <li class="checkout">
                                         <a href="/gio-hang">
                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>

@@ -8,7 +8,7 @@ using K22CNT4_TTCD1_NguyenThiTraMi.Models.EF;
 
 namespace K22CNT4_TTCD1_NguyenThiTraMi.Areas.NttmAdmin.Controllers
 {
-    public class SettingSystemController : Controller
+    public class NttmSettingSystemController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
         // GET: NttmAdmin/SettingSystem

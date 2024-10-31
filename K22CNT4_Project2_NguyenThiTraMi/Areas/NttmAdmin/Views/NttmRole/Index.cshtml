@@ -14,7 +14,7 @@
             <a href="/NttmAdmin" class="nav-link">Trang chủ</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/NttmAdmin/Role" class="nav-link">@ViewBag.Title</a>
+            <a href="/NttmAdmin/NttmRole/Index" class="nav-link">@ViewBag.Title</a>
         </li>
     </ul>
 }
@@ -27,7 +27,7 @@
             <h3 class="card-title">Danh sách Quyền</h3>
 
             <div class="card-tools">
-                <a href="/NttmAdmin/Role/Create" class="btn btn-success">Thêm mới</a>
+                <a href="/NttmAdmin/NttmRole/Create" class="btn btn-success">Thêm mới</a>
             </div>
         </div>
         <div class="card-body">
@@ -48,7 +48,7 @@
                             <tr>
                                 <td>@i</td>
                                 <td>@item.Name</td>
-                                <td><a href="/NttmAdmin/Role/Edit/@item.Id" class="btn btn-sm btn-primary">Sửa</a></td>
+                                <td><a href="/NttmAdmin/NttmRole/Edit/@item.Id" class="btn btn-sm btn-primary">Sửa</a></td>
                             </tr>
                             i++;
                         }

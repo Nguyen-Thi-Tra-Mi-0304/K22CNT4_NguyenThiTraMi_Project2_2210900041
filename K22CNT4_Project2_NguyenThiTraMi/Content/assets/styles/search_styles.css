@@ -1,0 +1,33 @@
+﻿@charset "utf-8";
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-container input[type="text"] {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    width: 200px; 
+    transition: width 0.3s ease; 
+}
+.search-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+.search-container button:hover {
+    background-color: #EE0000;
+}
+.search-container button i {
+    font-size: 16px;
+}

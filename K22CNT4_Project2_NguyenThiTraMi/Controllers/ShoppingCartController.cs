@@ -71,13 +71,15 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi.Controllers
             }
             return View();
         }
+
+        // Trang mua hàng thành công 
         [AllowAnonymous]
         public ActionResult CheckOutSuccess()
         {
             return View();
         }
 
-        //Phân trang giỏ hàng Item
+        // Trang hiện thông tin sản phẩm đặt hàng
         [AllowAnonymous]
         public ActionResult Partial_Item_Cart()
         {
@@ -89,7 +91,7 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi.Controllers
             return PartialView();
         }
 
-        // Thanh toán 
+        // From thanh toán trong trang thanh toán 
         [AllowAnonymous]
         public ActionResult Partial_Item_ThanhToan()
         {
@@ -101,6 +103,7 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi.Controllers
             return PartialView();
         }
 
+        // From nhập thông tin khách hàng trong trang thanh toán 
         [AllowAnonymous]
         public ActionResult Partial_CheckOut()
         {

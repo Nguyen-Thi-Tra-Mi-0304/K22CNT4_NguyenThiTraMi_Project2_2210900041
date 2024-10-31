@@ -61,12 +61,14 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi.Controllers
             return View(items);
         }
 
+        // New Arrival
         public ActionResult NttmPartial_ItemByCateId()
         {
             var items = db.Products.Where(x=>x.NttmIsHome && x.IsActive).Take(15).ToList();
             return PartialView(items);
         }
 
+        // Best seller
         public ActionResult NttmPartial_ProductSales()
         {
             var items = db.Products.Where(x => x.NttmIsSale && x.IsActive).Take(12).ToList();

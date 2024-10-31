@@ -12,10 +12,10 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/admin" class="nav-link">Trang chủ</a>
+            <a href="/NttmAdmin/Home" class="nav-link">Trang chủ</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="NttmAdmin/SettingSystem/Index" class="nav-link">@ViewBag.Title</a>
+            <a href="/NttmAdmin/NttmSettingSystem/Index" class="nav-link">@ViewBag.Title</a>
         </li>
     </ul>
 }
@@ -47,7 +47,7 @@
         </div>
         <div class="card-body">
             <div id="load_page"></div>
-            @Html.Action("Partial_Setting", "SettingSystem")
+            @Html.Action("Partial_Setting", "NttmSettingSystem")
         </div>
         <!-- /.card-body -->
         <div class="card-footer">

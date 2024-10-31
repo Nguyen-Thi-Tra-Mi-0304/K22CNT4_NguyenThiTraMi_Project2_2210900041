@@ -190,8 +190,8 @@
     <Compile Include="Areas\NttmAdmin\Controllers\NttmProductCategoryController.cs" />
     <Compile Include="Areas\NttmAdmin\Controllers\NttmProductController.cs" />
     <Compile Include="Areas\NttmAdmin\Controllers\ProductImageController.cs" />
-    <Compile Include="Areas\NttmAdmin\Controllers\RoleController.cs" />
-    <Compile Include="Areas\NttmAdmin\Controllers\SettingSystemController.cs" />
+    <Compile Include="Areas\NttmAdmin\Controllers\NttmRoleController.cs" />
+    <Compile Include="Areas\NttmAdmin\Controllers\NttmSettingSystemController.cs" />
     <Compile Include="Areas\NttmAdmin\Controllers\StatisticalController.cs" />
     <Compile Include="bin\NttmAdminAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -202,6 +202,7 @@
     <Compile Include="Controllers\NttmContactController.cs" />
     <Compile Include="Controllers\NttmMenuController.cs" />
     <Compile Include="Controllers\NttmProductController.cs" />
+    <Compile Include="Controllers\NttmSearchController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
@@ -586,6 +587,7 @@
     <Content Include="Content\assets\styles\contact_styles.css" />
     <Content Include="Content\assets\styles\main_styles.css" />
     <Content Include="Content\assets\styles\responsive.css" />
+    <Content Include="Content\assets\styles\search_styles.css" />
     <Content Include="Content\assets\styles\single_responsive.css" />
     <Content Include="Content\assets\styles\single_styles.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -3554,9 +3556,9 @@
     <Content Include="Areas\NttmAdmin\Views\NttmOrder\NttmIndex.cshtml" />
     <Content Include="Areas\NttmAdmin\Views\NttmOrder\NttmView.cshtml" />
     <Content Include="Areas\NttmAdmin\Views\NttmOrder\NttmPartial_SanPham.cshtml" />
-    <Content Include="Areas\NttmAdmin\Views\Role\Index.cshtml" />
-    <Content Include="Areas\NttmAdmin\Views\Role\Create.cshtml" />
-    <Content Include="Areas\NttmAdmin\Views\Role\Edit.cshtml" />
+    <Content Include="Areas\NttmAdmin\Views\NttmRole\Index.cshtml" />
+    <Content Include="Areas\NttmAdmin\Views\NttmRole\Create.cshtml" />
+    <Content Include="Areas\NttmAdmin\Views\NttmRole\Edit.cshtml" />
     <Content Include="Areas\NttmAdmin\Views\Account\Index.cshtml" />
     <Content Include="Areas\NttmAdmin\Views\Account\Create.cshtml" />
     <Content Include="Areas\NttmAdmin\Views\Account\Login.cshtml" />
@@ -3578,8 +3580,8 @@
     <Content Include="Content\assets\dist\js\.eslintrc.json" />
     <Content Include="Content\assets\dist\js\adminlte.js.map" />
     <Content Include="Content\assets\dist\js\adminlte.min.js.map" />
-    <Content Include="Areas\NttmAdmin\Views\SettingSystem\Partial_Setting.cshtml" />
-    <Content Include="Areas\NttmAdmin\Views\SettingSystem\Index.cshtml" />
+    <Content Include="Areas\NttmAdmin\Views\NttmSettingSystem\Partial_Setting.cshtml" />
+    <Content Include="Areas\NttmAdmin\Views\NttmSettingSystem\Index.cshtml" />
     <Content Include="Areas\NttmAdmin\Views\Statistical\Index.cshtml" />
     <Content Include="Content\assets\plugins\moment\locales.min.js.map" />
     <Content Include="Content\assets\plugins\moment\moment-with-locales.min.js.map" />
@@ -3658,6 +3660,7 @@
     <Content Include="Views\Account\Profile.cshtml" />
     <Content Include="Views\Review\_Review.cshtml" />
     <Content Include="Views\Review\_Load_Review.cshtml" />
+    <Content Include="Views\NttmSearch\NttmIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
