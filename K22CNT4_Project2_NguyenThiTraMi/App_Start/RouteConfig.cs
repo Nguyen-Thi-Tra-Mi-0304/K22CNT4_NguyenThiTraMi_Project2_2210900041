@@ -14,7 +14,7 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
                 name: "Contact",
-                url: "lien-he",
+                url: "contact",
                 defaults: new { controller = "NttmContact", action = "NttmIndex", alias = UrlParameter.Optional },
                 namespaces: new[] { "K22CNT4_TTCD1_NguyenThiTraMi.Controllers" }
             );
@@ -53,7 +53,7 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi
 
             routes.MapRoute(
                 name: "Products",
-                url: "san-pham",
+                url: "shop",
                 defaults: new { controller = "NttmProduct", action = "NttmIndex", alias = UrlParameter.Optional },
                 namespaces: new[] { "K22CNT4_TTCD1_NguyenThiTraMi.Controllers" }
             );

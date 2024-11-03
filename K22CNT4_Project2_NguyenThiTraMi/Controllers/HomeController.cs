@@ -17,7 +17,7 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi.Controllers
             return View();
         }
 
-        // Trang đăng kí, đăng nhập 
+        // Trang đăng kí email
         public ActionResult Partial_Subcrice()
         {
             return PartialView();

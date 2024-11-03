@@ -15,6 +15,8 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi.Models.EF
             this.NttmProductImages = new HashSet<NttmProductImage>();
             this.NttmOrderDetails = new HashSet<NttmOrderDetail>();
             this.ReviewProducts = new HashSet<ReviewProduct>();
+            this.Wishlists = new HashSet<NttmWishlist>();
+
         }
         [Key] // khóa chính 
         [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)] // tự động tăng 
@@ -54,7 +56,7 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi.Models.EF
         public virtual ICollection<NttmProductImage> NttmProductImages { get; set; } // Thuộc tính điều hướng
         public virtual ICollection<NttmOrderDetail> NttmOrderDetails { get; set; } // Thuộc tính điều hướng
         public virtual ICollection<ReviewProduct> ReviewProducts { get; set; } // Thuộc tính điều hướng
-
+        public virtual ICollection<NttmWishlist> Wishlists { get; set; } // Thuộc tính điều hướng
 
     }
 }

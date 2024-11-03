@@ -203,6 +203,7 @@
     <Compile Include="Controllers\NttmMenuController.cs" />
     <Compile Include="Controllers\NttmProductController.cs" />
     <Compile Include="Controllers\NttmSearchController.cs" />
+    <Compile Include="Controllers\NttmWishlistController.cs" />
     <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
@@ -304,6 +305,10 @@
     <Compile Include="Migrations\202410301545120_update_view.Designer.cs">
       <DependentUpon>202410301545120_update_view.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202411051345500_tableWishlist.cs" />
+    <Compile Include="Migrations\202411051345500_tableWishlist.Designer.cs">
+      <DependentUpon>202411051345500_tableWishlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Common\Common.cs" />
@@ -325,6 +330,7 @@
     <Compile Include="Models\EF\NttmSystemSetting.cs" />
     <Compile Include="Models\EF\ReviewProduct.cs" />
     <Compile Include="Models\EF\ThongKe.cs" />
+    <Compile Include="Models\EF\NttmWishlist.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NttmCommonAbstract.cs" />
@@ -3660,12 +3666,13 @@
     <Content Include="Views\Account\Profile.cshtml" />
     <Content Include="Views\Review\_Review.cshtml" />
     <Content Include="Views\Review\_Load_Review.cshtml" />
-    <Content Include="Views\NttmSearch\NttmIndex.cshtml" />
+    <Content Include="Views\NttmSearch\ResultSearch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\NttmAdmin\Data\" />
     <Folder Include="Content\ckfinder\userfiles\" />
+    <Folder Include="Views\NttmWishlist\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -3766,6 +3773,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202410301545120_update_view.resx">
       <DependentUpon>202410301545120_update_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411051345500_tableWishlist.resx">
+      <DependentUpon>202411051345500_tableWishlist.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

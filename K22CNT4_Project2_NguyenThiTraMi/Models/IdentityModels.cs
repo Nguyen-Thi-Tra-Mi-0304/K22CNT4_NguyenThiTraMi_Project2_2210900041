@@ -28,6 +28,7 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi.Models
         {
         }
 
+        public DbSet<NttmWishlist> Wishlists { get; set; }
         public DbSet<ReviewProduct> ReviewProducts { get; set; }
         public DbSet<ThongKe> ThongKes { get; set; }
         public DbSet<NttmCategory> Categories { get; set; }

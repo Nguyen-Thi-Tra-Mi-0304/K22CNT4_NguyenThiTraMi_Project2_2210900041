@@ -177,5 +177,10 @@ namespace K22CNT4_TTCD1_NguyenThiTraMi.Areas.NttmAdmin.Controllers
                 ModelState.AddModelError("", error);
             }
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+        }
     }
 }
